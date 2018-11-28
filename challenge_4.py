@@ -39,7 +39,6 @@ def lin_reg_white(train, test):
     # Printing runtime for this model
     print("\nLogistic Regression run time for white wine: \n\n", \
           round(pred.end, 5), " seconds.\n\n\n")
-    
     return pred
 
 
@@ -65,7 +64,7 @@ def main():
     white_output.iloc[:, 1] = predictor_white.quality
     
     param = pd.DataFrame(data = predictor_white.coef_)
-    
+    intercept=predictor_white.intercept_
     
     # Outputting results to winequality-white-sample.csv  
     white_output.to_csv("/Users/khalednakhleh/Documents/ecen_689" \
